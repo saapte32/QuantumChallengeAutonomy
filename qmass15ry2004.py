@@ -17,7 +17,7 @@ import pennylane as qml
 from torchvision.utils import save_image
 import math
 
-batch_size = 32
+batch_size = 8   #change your batch size
 lrG = 0.3  # Learning rate for the generator
 lrD = 0.01  # Learning rate for the discriminator
 num_iter=500
@@ -25,7 +25,7 @@ image_size = 64
 workers=0
 
 ngpu=1
-dataroot = "bdd/bdd/bdd100k/images/100k/train/bdd105"
+dataroot = "bdd105"
 
 # Enable CUDA device if available
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
